@@ -5,4 +5,8 @@
   
   "homepage": "https://hy3zzz.github.io/Fridge-Cliche-Mart"
 
+  "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
 }

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+KR:wght@100;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <title>Fridge Cliche Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+</head>
+<body>
+    <section class = "header">
+        <article class ="main">
+            <div class = "title">
+                <h1 class = "fridge">Fridge</h1>
+                <h1 class = "cliche-catalog">Cliche Mart</h1>
+            </div>
+            <div class = "description">
+                <h2 class = "big-description">Hover to uncover the story behind each piece...</h2>
+                <h3 class = "description">Discover the movie character that once possessed your chosen item.
+                    <br>Dive deeper into their world with a single click.</h3>
+            </div>
+        </article>
+        <article class = "sale">
+            UP TO SALE
+        </article>
+        <article class = "cart-btn-container" onClick="callShowCart()">
+            <img src = "../static/img/cart.png" class = "cart-img">
+        </article>
+    </section>
+    
+    <section class = "first-floor">
+        <section class = "pingo-doce-container">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+            <img src = "../static/img/pingo.png" class = "pingo-doce">
+        </section>
+    </section>
+
+    <div class = "shelf"></div>
+
+    <section class = "second-floor">
+        <section class = "yebisu-container">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/yebisu.png" class = "yebisu">
+            <img src = "../static/img/mendocino.png" class = "mendocino">
+            <img src = "../static/img/mendocino.png" class = "mendocino">
+            <img src = "../static/img/mendocino.png" class = "mendocino">
+            <img src = "../static/img/mendocino.png" class = "mendocino">
+            <img src = "../static/img/mendocino.png" class = "mendocino">
+        </section>
+    </section>
+
+    <div class = "shelf"></div>
+
+    <section class = "third-floor">
+        <section class = "heinz-container">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/dill_relish.png" class = "heinz">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+            <img src = "../static/img/farmland_milk.png" class = "milk">
+
+        </section>
+    </section>
+
+    <div class = "description-box pingo">
+        <div class = "item-visible">
+            <h2 class = "item-title">
+                Pingo Doce Soda
+            </h2>
+            <div class = "item-price">
+                $20.08
+            </div>
+        </div>
+        <div class = "item-invisible">
+            <p class ="invisible-desc">
+                They are an ordinary, unsuspecting individual who unknowingly interacts with something or someone superhuman.
+            </p>
+
+            <button onclick="addToCart('Pingo Doce', '../static/img/pingo.png', 'They are an ordinary, unsuspecting individual who unknowingly interacts with something or someone superhuman.')" class="add-to-cart-btn">
+                <span class="material-symbols-outlined">
+                    add_shopping_cart
+                    </span>
+                <span class="text">Add to Cart</span>
+            </button>
+        </div>
+    </div>
+
+    <div class = "description-box yebisu">
+        <div class = "item-visible">
+            <h2 class = "item-title">
+                Premium Yebisu
+            </h2>
+            <div class = "item-price">
+                $20.07
+            </div>
+        </div>
+        <div class = "item-invisible">
+            <p class ="invisible-desc">
+                They navigate strategic supervision and personal disarray, embodying a dual role as mentor and caregiver. Their persona is colored by their past trauma and vibrant humor.
+            </p>
+            
+            <button onclick="addToCart('Premium Yebisu', '../static/img/yebisu.png', 'They navigate strategic supervision and personal disarray, embodying a dual role as mentor and caregiver. Their persona is colored by their past trauma and vibrant humor.')" class="add-to-cart-btn">
+                <span class="material-symbols-outlined">
+                    add_shopping_cart
+                    </span>
+                <span class="text">Add to Cart</span>
+            </button>
+        </div>
+    </div>
+
+    <div class = "description-box mendocino">
+        <div class = "item-visible">
+            <h2 class = "item-title">
+            Mendocino Mustard
+            </h2>
+            <div class = "item-price">
+                $19.99
+            </div>
+        </div>
+        <div class = "item-invisible">
+            <p class ="invisible-desc">
+                They are initially an insomniac worker. Struggling with identity and self-perception, they oscillate between conforming to societal norms and radically opposing them.
+            </p>
+    
+        
+            <button onclick="addToCart('Mendocino Mustard', '../static/img/mendocino.png', 'They are initially an insomniac worker. Struggling with identity and self-perception, they oscillate between conforming to societal norms and radically opposing them.')" class="add-to-cart-btn">
+                <span class="material-symbols-outlined">
+                    add_shopping_cart
+                    </span>
+                <span class="text">Add to Cart</span>
+            </button>
+        </div>
+    </div>
+
+    <div class = "description-box heinz">
+        <div class = "item-visible">
+            <h2 class = "item-title">
+                Heinz Dill<br>Relish
+            </h2>
+            <div class = "item-price">
+                $20.06
+            </div>
+        </div>
+        <div class = "item-invisible">
+            <p class ="invisible-desc">
+                This person balances high-stakes professional demands with a yearning for personal peace. They exhibit tactical acumen, and charm amidst their adrenaline-fueled lifestyle.
+            </p>
+            <button onclick="addToCart('Heinz Dill Relish', '../static/img/dill_relish.png', 'This person balances high-stakes professional demands with a yearning for personal peace. They exhibit remarkable loyalty, tactical acumen, and charm amidst their adrenaline-fueled lifestyle.')" class="add-to-cart-btn">
+                <span class="material-symbols-outlined">
+                    add_shopping_cart
+                    </span>
+                <span class="text">Add to Cart</span>
+            </button>
+        </div>
+    </div>
+
+    <div class = "description-box milk">
+        <div class = "item-visible">
+            <h2 class = "item-title">
+                Farmland<br>Milk
+            </h2>
+            <div class = "item-price">
+                $19.94
+            </div>
+        </div>
+        <div class = "item-invisible">
+            <p class ="invisible-desc">
+                This person navigates a dichotomy of professional ruthlessness and personal tenderness, learning about vulnerability and humanity through an unexpected connection.            </p>
+            <button onclick="addToCart('Farmland Milk', '../static/img/farmland_milk.png', 'This person navigates a dichotomy of professional ruthlessness and personal tenderness, learning about vulnerability and humanity through an unexpected connection.')" class="add-to-cart-btn">
+                <span class="material-symbols-outlined">
+                    add_shopping_cart
+                    </span>
+                <span class="text">Add to Cart</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div id="cart-overlay" class="cart-overlay">
+        <div class = "cart-container">
+            <div id = "close-cart-btn" class = "close">Close</div>
+          <div class= "cart-text">
+            <h1 class = "fridge">Fridge</h1>
+            <h1 class = "cliche-catalog">Cliche Mart</h1>
+            <p class = "desc">The commodity is not just a simple, undifferentiated quantity. Each one is a hieroglyph of 'social relations’.</p>
+            <p id="date_time"></p>
+        </div>
+
+            <div id="cart-items">
+                {% if cart %}
+                  {% for item in cart %}
+            </div>
+            <div class="cart-item">
+                  {% endfor %}
+                {% else %}
+                  <div class="cart-empty-message">Your cart is empty.</div>
+                {% endif %}
+            </div>
+            <button onclick = "goToShipping()" class="confirm-btn">
+                <span class = "text">Confirm Order →</span>
+            </button>
+        </div>
+      </div>
+              
+    <div class="overlay-background" id="overlay-background"></div>
+
+    <script src="../static/script.js"></script>
+    <script>
+        function goToShipping() {
+            window.location.href = "loading"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Loading</title>
+</head>
+<body>
+    <p id="animated-text"></p>
+
+    <script>
+        var text = "shipping to your fridge...";
+        var i = 0;
+        var speed = 100; // Speed it takes to type each letter, in milliseconds
+    
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("animated-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // Wait before clearing the text and starting over
+                setTimeout(function() {
+                    document.getElementById("animated-text").innerHTML = '';
+                    i = 0;
+                    typeWriter();
+                }, 2000); // Wait time before clearing the text
+            }
+        }
+    
+        // Call function to start the animation
+        typeWriter();
+    </script>    
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'fridge'; // Assumes 'C.html' is the URL of Page C
+        }, 10000); // Time is in milliseconds
+    </script>
+
+        
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Fridge</title>
+    <style>
+        .draggable-resizable {
+            width: 100%;
+            height: auto;
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cart-overlay" class="cart-overlay">
+        <div class = "cart-container">
+            <div id = "close-cart-btn" class = "close">Close</div>
+          <div class= "cart-text">
+            <h1 class = "fridge">Fridge</h1>
+            <h1 class = "cliche-catalog">Cliche Mart</h1>
+            <p class = "desc">What's in your refrigerator? And why did you choose these items? Guess the owner of each item and <a href = "mailto:hhhyejaaa@snu.ac.kr?subject=[Fridge Cliche Mart]">let me know the answer.</a></p>
+            <p id="date_time"></p>
+        </div>
+
+            <div id="cart-items">
+                {% if cart %}
+                  {% for item in cart %}
+            </div>
+            <div class="cart-item">
+                  {% endfor %}
+                {% else %}
+                  <div class="cart-empty-message">Your cart is empty.</div>
+                {% endif %}
+            </div>
+            <button onclick = "buyMore()" class="confirm-btn">
+                <span class = "text">Buy More</span>
+            </button>
+        </div>
+      </div>
+
+    <p class = "fridge-text">make your own fridge and screenshot to save!</p>
+
+    <div class = "center-fridge">
+        <img id="centerImage" src="../static/img/fridge.png">
+    </div>
+
+    <div class = "fridge-btn" style="position: absolute; top: 20px; left: 20px;">
+        <img src="../static/img/fridge_btn.png" onclick="changeImage('../static/img/fridge.png')">
+        <img src="../static/img/coca_fridge_btn.png" onclick="changeImage('../static/img/coca_fridge.png')">
+        <img src="../static/img/retro_fridge_btn.png" onclick="changeImage('../static/img/retro_fridge.png')">
+    </div>
+    
+
+    <div id="cart"></div>
+
+    <script>
+        fetch('/get-cart')
+            .then(response => response.json())
+            .then(cart => {
+                const cartDiv = document.getElementById('cart');
+    
+                cart.forEach((item, index) => {
+                    const imgWrapper = document.createElement('div');
+                    imgWrapper.id = 'imgWrapper' + index;
+                    imgWrapper.style.position = 'absolute';  // set position to absolute
+    
+                    const img = document.createElement('img');
+                    img.src = item.image;
+                    img.classList.add('draggable-resizable');
+    
+                    imgWrapper.appendChild(img);
+                    cartDiv.appendChild(imgWrapper);
+    
+                    // get the naturalWidth and naturalHeight of the image to compute the aspect ratio
+                    const aspectRatio = img.naturalWidth / img.naturalHeight;
+    
+                    // Make the appended image wrapper draggable and resizable
+                    $("#" + imgWrapper.id).resizable({
+                        aspectRatio: true,  // maintain aspect ratio
+                        // alsoResize: img
+                    }).draggable({
+                        containment: 'window'  // contain draggable within the window
+                    });
+    
+                    // Calculate random x and y coordinates within the viewport
+                    var x = Math.floor(Math.random() * ($(window).width() - $(imgWrapper).outerWidth() - 500));
+                    var y = Math.floor(Math.random() * ($(window).height() - $(imgWrapper).outerHeight() - 300));
+    
+                    // Position the image wrapper at the random coordinates
+                    $(imgWrapper).css({ top: y, left: x });
+                });
+            });
+    </script>
+    
+    <script>
+    function changeImage(image) {
+        document.getElementById('centerImage').src = image;
+    }
+    </script>
+
+    <script>
+        function buyMore() {
+            window.location.href = "/"
+        }
+    </script>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
